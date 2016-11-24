@@ -5,9 +5,15 @@
 <title>QuizDreamweaver2</title>
 </head>
 
+// Title
+
 <body>
 <p> <strong style="font-weight: 900; font-size: 36px; text-align: center;">CS Finance Quiz</strong></p>
 <p>&nbsp;</p>
+<form id="myForm" action="form_action.asp">
+
+// Question 1
+
 <p><strong>1. Wie kann ein Mahnstopp für unsere Rechnungen eingesetzt werden? </strong></p>
 <p>
   <input type="radio" name="radio" id="radio" value="radio">
@@ -26,45 +32,20 @@
   <label for="radio">In ERP im Kommentarenfeld" </label>
 </p>
 <p>&nbsp;</p>
-<p><strong>2. Wann wird die Kreditkarte/PayPal Konto abgebucht?</strong></p>
+
+// Submit button
+
 <p>
-  <input type="radio" name="radio2" id="radio2" value="radio2">
-  <label for="radio2">23 Tage AT und DE, 28 Tage CH </label>
+  <input type="submit" onclick="myFunction()" value="Submit form">
+  </form>
 </p>
-<p>
-  <input type="radio" name="radio2" id="radio2" value="radio2">
-  <label for="radio2">21 Tage AT und DE, 28 Tage CH </label>
-</p>
-<p>
-  <input type="radio" name="radio2" id="radio2" value="radio2">
-  <label for="radio2">28 AT und DE, 21 Tage CH </label>
-</p>
-<p>
-  <input type="radio" name="radio2" id="radio2" value="radio2">
-  <label for="radio2">28 Tage AT und DE, 23 Tage CH </label>
-</p>
-<p>&nbsp;</p>
-<p><strong>3. Der Kunde hat eine Kreditkarte hinterlegt, warum wird diese nicht belastet?</strong></p>
-<p>
-  <input type="radio" name="radio3" id="radio3" value="radio3">
-  <label for="radio3">Die CC wurde vor Februar 2016 hinterlegt und die Daten wurden nicht übernommen </label>
-</p>
-<p>
-  <input type="radio" name="radio3" id="radio3" value="radio3">
-  <label for="radio3">Die CC wurde hinterlegt nachdem die Bestellung angelegt wurde </label>
-</p>
-<p>
-  <input type="radio" name="radio3" id="radio3" value="radio3">
-  <label for="radio3">Die Transktion war nicht erfolgreich </label>
-</p>
-<p>
-  <input type="radio" name="radio3" id="radio3" value="radio3">
-  <label for="radio3">Alle diese Varianten </label>
-</p>
-<p>&nbsp;</p>
-<p>
-  <input type="submit" name="submit" id="submit" value="Zuschicken">
-</p>
-  </p>
+
+<script>
+function myFunction() {
+    document.getElementById("myForm").submit();
+}
+</script>
+
+  <script src="index.html"></script>
 </body>
 </html>
