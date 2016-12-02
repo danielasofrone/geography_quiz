@@ -5,47 +5,53 @@
 <title>QuizDreamweaver2</title>
 </head>
 
-// Title
+<! Title>
 
 <body>
 <p> <strong style="font-weight: 900; font-size: 36px; text-align: center;">CS Finance Quiz</strong></p>
-<p>&nbsp;</p>
-<form id="myForm" action="form_action.asp">
 
-// Question 1
 
-<p><strong>1. Wie kann ein Mahnstopp für unsere Rechnungen eingesetzt werden? </strong></p>
+<! Question 1>
+
+<p> <strong>1. Wie kann ein Mahnstopp für unsere Rechnungen eingesetzt werden? </strong></p>
 <p>
-  <input type="radio" name="radio" id="radio" value="radio">
+  <input type="radio" name="radio" id="a1" value="a1">
   <label for="radio">In Grails unter "Bestellung bearbeiten" </label>
 </p>
 <p>
-  <input type="radio" name="radio" id="radio" value="radio">
+  <input type="radio" name="radio" id="a2" value="a2">
   <label for="radio">In Abiliware unter Kundenkorrespondenz"</label>
 </p>
 <p>
-  <input type="radio" name="radio" id="radio" value="radio">
+  <input type="radio" name="radio" id="a3" value="a3">
   <label for="radio">In Abliware unter Aufgaben"</label>
 </p>
 <p>
-  <input type="radio" name="radio" id="radio" value="radio">
+  <input type="radio" name="radio" id="a4" value="a4">
   <label for="radio">In ERP im Kommentarenfeld" </label>
 </p>
-<p>&nbsp;</p>
 
-// Submit button
+
+<!Submit button>
 
 <p>
-  <input type="submit" onclick="myFunction()" value="Submit form">
-  </form>
-</p>
+  <input type="submit" name="whenSubmit" id="whenSubmit" value"Zuschicken"
+  onclick="functionSubmit()"/>
 
-<script>
-function myFunction() {
-    document.getElementById("myForm").submit();
+</p>
+<script type="text/javascript">
+var score = 0;
+function functionSubmit() {
+    var correctAnswer = document.getElementById('a3')
+    if (correctAnswer.checked === true) {
+      score++
+      alert("Das ist korrekt. Du hast nun" + " " + score + " " + "Punkte!")
+    }
+    else {
+      alert("Das ist leider nicht korrekt")
+    }
+
 }
 </script>
-
-  <script src="index.html"></script>
-</body>
+ </body>
 </html>
