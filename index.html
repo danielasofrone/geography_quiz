@@ -2,34 +2,54 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>QuizDreamweaver2</title>
+<title>Quiz</title>
 </head>
 
 <! Title>
 
 <body>
-<p> <strong style="font-weight: 900; font-size: 36px; text-align: center;">CS Finance Quiz</strong></p>
+<p> <strong style="font-weight: 900; font-size: 36px; text-align: center;">Geography Quiz</strong></p>
 
 
-<! Question 1>
+<! first Question >
 
-<p> <strong>1. Wie kann ein Mahnstopp für unsere Rechnungen eingesetzt werden? </strong></p>
+<p> <strong>1. Welche Stadt ist am nähesten an Paris? </strong></p>
 <p>
-  <input type="radio" name="radio" id="a1" value="a1">
-  <label for="radio">In Grails unter "Bestellung bearbeiten" </label>
+  <input type="radio" name="radio1" id="a1" value="a1">
+  <label for="radio"> Amsterdam </label>
 </p>
 <p>
-  <input type="radio" name="radio" id="a2" value="a2">
-  <label for="radio">In Abiliware unter Kundenkorrespondenz"</label>
+  <input type="radio" name="radio1" id="a2" value="a2">
+  <label for="radio"> Berlin </label>
 </p>
 <p>
-  <input type="radio" name="radio" id="a3" value="a3">
-  <label for="radio">In Abliware unter Aufgaben"</label>
+  <input type="radio" name="radio1" id="a3" value="a3">
+  <label for="radio"> Antwerpen </label>
 </p>
 <p>
-  <input type="radio" name="radio" id="a4" value="a4">
-  <label for="radio">In ERP im Kommentarenfeld" </label>
+  <input type="radio" name="radio1" id="a4" value="a4">
+  <label for="radio"> London </label>
 </p>
+ <!-- second QUESTION:  -->
+
+<p> <strong>2. In welches Meer fließt der Nil? </strong></p>
+<p>
+  <input type="radio" name="radio2" id="b1" value="b1">
+  <label for="radio"> Das Mittelmeer </label>
+</p>
+<p>
+  <input type="radio" name="radio2" id="b2" value="b2">
+  <label for="radio"> Kaspisches Meer </label>
+</p>
+<p>
+  <input type="radio" name="radio2" id="b3" value="b3">
+  <label for="radio"> Schwarzes Meer </label>
+</p>
+<p>
+  <input type="radio" name="radio2" id="b4" value="b4">
+  <label for="radio"> Rotes Meer </label>
+</p>
+
 
 
 <!Submit button>
@@ -45,7 +65,7 @@ function functionSubmit() {
     var correctAnswer = document.getElementById('a3')
     if (correctAnswer.checked === true) {
       score++
-      alert("Das ist korrekt. Du hast nun" + " " + score + " " + "Punkte!")
+      alert("Das ist korrekt. Du hast nun" + " " + score + " " + "Punkt(e)!")
     }
     else {
       alert("Das ist leider nicht korrekt")
