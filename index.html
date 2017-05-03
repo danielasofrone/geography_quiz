@@ -1,65 +1,57 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Quiz</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link href ="style.css" rel = "stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px|Yrsa" rel="stylesheet">
+    <script src = "quizIndex.js"></script>
+  </head>
 
-<! Title>
+<!-- Title-->
 
 <body>
-<p> <strong style="font-weight: 900; font-size: 36px; text-align: center;">Geography Quiz</strong></p>
+  <h1> <strong style="font-weight: 900; font-size: 36px; text-align: center;">Geography Quiz</strong></h1>
 
 
-<! first Question >
+<!-- 1 Question-->
+  <form id = "quiz" name = "quiz">
 
-<p> <strong>1. Welche Stadt ist am nähesten an Paris? </strong></p>
-<p>
-  <input type="radio" name="radio1" id="a1" value="a1">
-  <label for="radio"> Amsterdam </label>
-</p>
-<p>
-  <input type="radio" name="radio1" id="a2" value="a2">
-  <label for="radio"> Berlin </label>
-</p>
-<p>
-  <input type="radio" name="radio1" id="a3" value="a3">
-  <label for="radio"> Antwerpen </label>
-</p>
-<p>
-  <input type="radio" name="radio1" id="a4" value="a4">
-  <label for="radio"> London </label>
-</p>
- <!-- second QUESTION:  -->
+    <p> <strong>1. Which city is closest to Paris? </strong></p>
 
-<p> <strong>2. In welches Meer fließt der Nil? </strong></p>
-<p>
-  <input type="radio" name="radio2" id="b1" value="b1">
-  <label for="radio"> Das Mittelmeer </label>
-</p>
-<p>
-  <input type="radio" name="radio2" id="b2" value="b2">
-  <label for="radio"> Kaspisches Meer </label>
-</p>
-<p>
-  <input type="radio" name="radio2" id="b3" value="b3">
-  <label for="radio"> Schwarzes Meer </label>
-</p>
-<p>
-  <input type="radio" name="radio2" id="b4" value="b4">
-  <label for="radio"> Rotes Meer </label>
-</p>
+  <input type = "radio" id = "mc" name="question1" value="London"> Amsterdam <br>
+  <input type = "radio" id = "mc" name="question1" value="Berlin"> Berlin <br>
+  <input type = "radio" id = "mc" name="question1" value="Antwerpen"> Antwerpen <br>
+  <input type = "radio" id = "mc" name="question1" value="Amsterdam"> London <br>
 
+ <!-- 2 Question -->
 
+    <p> <strong>2. Which sea does the Nile flow into?</strong></p>
 
-<!Submit button>
+   <input type = "radio" id = "mc" name="question2" value="Mediterranean Sea"> Mediterranean Sea <br>
+   <input type = "radio" id = "mc" name="question2" value="Black Sea"> Black Sea <br>
+   <input type = "radio" id = "mc" name="question2" value="Caspian Sea"> Caspian Sea <br>
+   <input type = "radio" id = "mc" name="question2" value="Red Sea"> Red Sea <br>
 
-<p>
-  <input type="submit" name="whenSubmit" id="whenSubmit" value"Zuschicken"
-  onclick="functionSubmit()"/>
+<!-- 3 Question -->
 
-</p>
-<script type="text/javascript">
+    <p> <strong>3. What percentage of trade is transported via ships? </strong></p>
+
+  <input type = "radio" id = "mc" name="question3" value="60%"> 90% <br>
+  <input type = "radio" id = "mc" name="question3" value="75%"> 75% <br>
+  <input type = "radio" id = "mc" name="question3" value="90%"> 60% <br>
+  <input type = "radio" id = "mc" name="question3" value="30%"> 30% <br>
+
+<!--Submit button-->
+
+  <input type = "submit" id = "button" value = "Submit" onclick = "functionSubmit()">
+
+</form>
+<div id = "submitted">
+  <p id = "correctNumber">Done</p>
+</div>
+
+<!-- <script type="text/javascript">
 var score = 0;
 function functionSubmit() {
     var correctAnswer = document.getElementById('a3')
@@ -70,8 +62,9 @@ function functionSubmit() {
     else {
       alert("Das ist leider nicht korrekt")
     }
-
 }
-</script>
+</script> //-->
+   </html>
+
  </body>
 </html>

@@ -1,29 +1,19 @@
-var questions = [
-  ["Welche Stadt ist am nähesten an Paris?", "Antwerpen"],
-  [“In welches Meer fließt der Nil?", “Das Mittelmeer"],
-  [“Was ist die Hauptstadt von Island?", “Reykjavik"],
-  ["Welches ist der größte Inselstaat der Welt mit mehr als siebzehntausend Inseln?", "Indonesien"],
-  ["Was ist die Hauptstadt von Venezuela?", "Caracas"]
-];
+function functionSubmit() {
+  const question1 = document.quiz.question1.value;
+  const question2 = document.quiz.question2.value;
+  const question3 = document.quiz.question3.value;
+let correct = 0;
 
-var correctAnswer = 0;
-var question;
-var answer;
-var response;
-var html;
+    if (question1 === "Antwerpen") {
+      correct++;
+      }
+    if (question2 === "Mediterranean Sea") {
+      correct ++;
+      }
+    if (question3 === "90%") {
+      correct++;
+      }
+  document.getElementById("submitted").style.visibility = "visible";
+  document.getElementById("correctNumber").innerHTML = "You have " + correct + " correct answers. ";
 
-function print(message) {
-  document.write(message);
-}
-
-for(i=0;i<questions.lenght; i++) {
-  question = questions [i][0];
-  answer = questions [i][1];
-  response = parseInt(prompt(question));
-  if(response ===answer) {
-    correctAnswer+=1;
-  }
-}
-
-html = “Du hast" + correctAnswers + “Punkt(e).";
-print(html);
+ }
