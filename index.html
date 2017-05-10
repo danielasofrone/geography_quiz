@@ -1,113 +1,103 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Quiz</title>
-    <link href ="style.css" rel = "stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Slabo+27px|Yrsa" rel="stylesheet">
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+  <link href ="style.css" rel = "stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script
   src="https://code.jquery.com/jquery-3.2.1.slim.js"
   integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg="
   crossorigin="anonymous"></script>
-<script src="bootstrap.js"></script>
-    <script src = "quizIndex.js"></script>
-  </head>
+  <script src="bootstrap.js"></script>
+  <script src = "quizIndex.js"></script>
+</head>
 
 <!-- Title-->
 
 <body>
-  <h1> <strong style="font-weight: 900; font-size: 36px; text-align: center;">Geography Quiz</strong></h1>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Geography Quiz</h1>
+      <p> A multiple choice geography quiz containing 10 quick questions </p>
+    </div>
 
-  <!-- Button trigger modal -->
-  <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    Launch demo modal
-  </button> -->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <!--<h4 class="modal-title" id="myModalLabel">The correct answers are...</h4> -->
+          </div>
+          <div class="modal-body">
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+            <div id = "submitted">
+              <h4 id = "correctNumber">Done</h4>
+            </div>
+                <h5> The correct ones are... </h5> 
+            <ul>
+              <li> Question 1: Which city is closest to Paris? - Antwerp</li>
+              <li> Question 2: Which sea does the Nile flow into? - Mediterranean Sea </li>
+              <li> Question 3: What percentage of trade is transported via ships? - 90% </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-<!--
-  <form role="form" name="quizform" action="quiztest.asp?qtest=HTML" method="post">
-      <input type="hidden" name="starttime" value="5/3/2017 3:05:12 PM">
-      <input type="hidden" name="answers" value="0000000000000000000000000000000000000000" size="25">
-      <input type="hidden" name="qnumber" value="1" size="25">
-      <div class="radio"><label><input type="radio" name="quiz" id="1" value="1"> Home Tool Markup Language</label></div><div class="radio"><label><input type="radio" name="quiz" id="2" value="2"> Hyperlinks and Text Markup Language</label></div><div class="radio"><label><input type="radio" name="quiz" id="3" value="3"> Hyper Text Markup Language</label></div>
-      <br>
-      <input type="submit" class="w3-btn w3-orange w3-large w3-text-white" value=" Next ">
-    </form> -->
-
-<!-- 1 Question-->
-  <form role="form" id = "quiz" name = "quiz">
-
-    <p> <strong>1. Which city is closest to Paris? </strong></p>
-
-  <input type = "radio" id = "mc" name="question1" value="London"> London <br>
-  <input type = "radio" id = "mc" name="question1" value="Berlin"> Berlin <br>
-  <input type = "radio" id = "mc" name="question1" value="Antwerpen"> Antwerpen <br>
-  <input type = "radio" id = "mc" name="question1" value="Amsterdam"> Amsterdam <br>
-
- <!-- 2 Question -->
-
-    <p> <strong>2. Which sea does the Nile flow into?</strong></p>
-
-   <input type = "radio" id = "mc" name="question2" value="Mediterranean Sea"> Mediterranean Sea <br>
-   <input type = "radio" id = "mc" name="question2" value="Black Sea"> Black Sea <br>
-   <input type = "radio" id = "mc" name="question2" value="Caspian Sea"> Caspian Sea <br>
-   <input type = "radio" id = "mc" name="question2" value="Red Sea"> Red Sea <br>
-
-<!-- 3 Question -->
-
-    <p> <strong>3. What percentage of trade is transported via ships? </strong></p>
-
-  <input type = "radio" id = "mc" name="question3" value="60%"> 60% <br>
-  <input type = "radio" id = "mc" name="question3" value="75%"> 75% <br>
-  <input type = "radio" id = "mc" name="question3" value="90%"> 90% <br>
-  <input type = "radio" id = "mc" name="question3" value="30%"> 30% <br>
-
-<!--Submit button-->
-
-  <input type = "button" id = "button" value = "Submit" data-toggle="modal" data-target="#myModal" onclick = "functionSubmit()">
-
-</form>
 
 
+    <!-- 1 Question-->
+    <form role="form" id = "quiz" name = "quiz">
+      <p class="questionText"> 1. Which city is closest to Paris? </p>
 
-<div id = "submitted">
-  <p id = "correctNumber">Done</p>
-</div>
+      <input type = "radio" id = "multipleChoice" name="question1" value="London"> London <br>
+      <input type = "radio" id = "multipleChoice" name="question1" value="Berlin"> Berlin <br>
+      <input type = "radio" id = "multipleChoice" name="question1" value="Antwerpen"> Antwerpen <br>
+      <input type = "radio" id = "multipleChoice" name="question1" value="Amsterdam"> Amsterdam <br>
 
-<!-- <script type="text/javascript">
-var score = 0;
-function functionSubmit() {
-    var correctAnswer = document.getElementById('a3')
-    if (correctAnswer.checked === true) {
-      score++
-      alert("Das ist korrekt. Du hast nun" + " " + score + " " + "Punkt(e)!")
-    }
-    else {
-      alert("Das ist leider nicht korrekt")
-    }
+      <!-- 2 Question -->
+
+      <p class="questionText"> 2. Which sea does the Nile flow into? </p>
+
+      <input type = "radio" id = "multipleChoice" name="question2" value="Mediterranean Sea"> Mediterranean Sea <br>
+      <input type = "radio" id = "multipleChoice" name="question2" value="Black Sea"> Black Sea <br>
+      <input type = "radio" id = "multipleChoice" name="question2" value="Caspian Sea"> Caspian Sea <br>
+      <input type = "radio" id = "multipleChoice" name="question2" value="Red Sea"> Red Sea <br>
+
+      <!-- 3 Question -->
+
+      <p class="questionText"> 3. What percentage of trade is transported via ships? </p>
+
+      <input type = "radio" id = "multipleChoice" name="question3" value="60%"> 60% <br>
+      <input type = "radio" id = "multipleChoice" name="question3" value="75%"> 75% <br>
+      <input type = "radio" id = "multipleChoice" name="question3" value="90%"> 90% <br>
+      <input type = "radio" id = "multipleChoice" name="question3" value="30%"> 30% <br>
+
+      <!--Submit button-->
+
+      <input type = "button" id = "button" value = "Submit" data-toggle="modal" data-target="#myModal" onclick = "functionSubmit()">
+    </form>
+    </html>
+
+  </body>
+  </html>
+
+  <!-- <script type="text/javascript">
+  var score = 0;
+  function functionSubmit() {
+  var correctAnswer = document.getElementById('a3')
+  if (correctAnswer.checked === true) {
+  score++
+  alert("Das ist korrekt. Du hast nun" + " " + score + " " + "Punkt(e)!")
+}
+else {
+alert("Das ist leider nicht korrekt")
+}
 }
 </script> //-->
-   </html>
-
- </body>
-</html>
